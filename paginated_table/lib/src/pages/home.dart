@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paginated_table/src/components/table.dart';
 import 'package:paginated_table/src/data/data.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,13 +23,13 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.deepPurple[100],
       body: Column(
         children: [
-          PaginatedDataTable(
-            source: _data,
+          CustomTable(
             columns: const [
               DataColumn(label: Text('ID')),
               DataColumn(label: Text('NAME')),
               DataColumn(label: Text('PRICE'))
             ],
+            source: _data,
             columnSpacing: 100,
             horizontalMargin: 60,
             rowsPerPage: 8,
