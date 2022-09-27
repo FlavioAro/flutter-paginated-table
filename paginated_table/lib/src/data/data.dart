@@ -14,8 +14,8 @@ class MyData extends DataTableSource {
   DataRow? getRow(int index) {
     return DataRow(cells: [
       DataCell(Text(_data[index]['id'].toString())),
-      DataCell(Text(_data[index]["title"])),
-      DataCell(Text(_data[index]["price"].toString())),
+      DataCell(Text(_data[index]['title'])),
+      DataCell(Text(_data[index]['price'].toString())),
     ]);
   }
 
